@@ -121,7 +121,7 @@ export default function Projects() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="absolute inset-x-0 bottom-4 mx-auto flex w-max translate-y-3 items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-semibold text-ink opacity-0 shadow-lg transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+                            className="absolute inset-x-0 bottom-4 mx-auto flex w-max translate-y-3 items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-semibold text-black opacity-0 shadow-lg transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
                           >
                             View live site
                             <ArrowUpRight className="h-3.5 w-3.5" />

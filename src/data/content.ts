@@ -59,11 +59,6 @@ export const about = {
   ],
 };
 
-export const stats = [
-  { value: "2+", label: "Years Experience", icon: "laptop" },
-  { value: "10+", label: "Projects Completed", icon: "shield" },
-] as const;
-
 export const aboutTech = [
   "react",
   "nextjs",

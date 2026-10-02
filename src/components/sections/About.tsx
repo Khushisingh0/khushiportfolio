@@ -4,9 +4,7 @@ import Image from "next/image";
 import {
   Code2,
   Gauge,
-  Laptop,
   MessageSquare,
-  ShieldCheck,
   Smartphone,
   Target,
 } from "lucide-react";
@@ -14,12 +12,7 @@ import { motion } from "framer-motion";
 import DotGrid from "@/components/DotGrid";
 import { TechLogo } from "@/components/TechLogos";
 import { fadeUp, stagger } from "@/lib/motion";
-import { about, aboutTech, reasons, stats } from "@/data/content";
-
-const statIcons = {
-  laptop: Laptop,
-  shield: ShieldCheck,
-};
+import { about, aboutTech, reasons } from "@/data/content";
 
 const reasonIcons = {
   target: Target,
@@ -35,63 +28,18 @@ export default function About() {
       <DotGrid className="left-8 top-24 h-24 w-24 opacity-50" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-14 lg:grid-cols-2 lg:gap-16">
-          <div className="relative mx-auto w-full max-w-[540px] pb-4">
+          <div className="relative mx-auto w-full max-w-[540px]">
             <div className="absolute -left-6 top-10 h-56 w-56 rounded-full bg-brand-soft" />
             <DotGrid className="left-2 top-2 h-20 w-20" />
             <div className="relative overflow-hidden rounded-[32px]">
               <Image
-                src="/images/khushi-hero.png"
-                alt="Khushi Singh"
-                width={681}
-                height={1024}
-                className="h-[520px] w-full object-cover object-[center_12%]"
+                src="/images/khushi-about.jpg"
+                alt="Khushi Singh working"
+                width={1024}
+                height={885}
+                className="h-[520px] w-full object-cover object-[center_20%]"
               />
             </div>
-
-            <svg
-              className="absolute -bottom-2 left-10 h-16 w-24 text-brand"
-              viewBox="0 0 90 50"
-              fill="none"
-              aria-hidden
-            >
-              <path
-                d="M5 10 C 20 40, 55 42, 82 18"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeDasharray="4 5"
-                strokeLinecap="round"
-              />
-              <path d="M74 12 L84 18 L73 24" stroke="currentColor" strokeWidth="1.6" fill="none" />
-            </svg>
-
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative z-10 mx-6 -mt-8 rounded-2xl border border-line bg-card/95 p-1.5 card-shadow backdrop-blur-sm sm:mx-10"
-            >
-              <div className="grid grid-cols-2 gap-1.5">
-                {stats.map((item) => {
-                  const Icon = statIcons[item.icon];
-                  return (
-                    <div
-                      key={item.label}
-                      className="rounded-xl bg-lavender px-2 py-2 text-center"
-                    >
-                      <span className="mx-auto flex h-6 w-6 items-center justify-center rounded-full bg-card shadow-sm">
-                        <Icon className="h-3.5 w-3.5 text-brand" />
-                      </span>
-                      <p className="mt-1 text-lg font-extrabold leading-none tracking-tight text-ink">
-                        {item.value}
-                      </p>
-                      <p className="mt-0.5 text-[10px] font-medium leading-tight text-muted">
-                        {item.label}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </motion.div>
           </div>
 
           <motion.div

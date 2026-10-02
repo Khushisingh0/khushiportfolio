@@ -114,11 +114,11 @@ export default function Hero() {
 
             <div className="absolute inset-x-10 top-6 bottom-2 overflow-hidden rounded-[32px] shadow-[0_20px_50px_rgba(17,24,39,0.18)] sm:inset-x-14 sm:top-8 sm:bottom-4">
               <Image
-                src="/images/khushi-hero.png"
+                src="/images/khushi-hero-sit.jpg"
                 alt="Khushi Singh"
                 fill
                 priority
-                className="object-cover object-[center_18%]"
+                className="object-cover object-[center_12%]"
                 sizes="(max-width: 768px) 90vw, 520px"
               />
             </div>

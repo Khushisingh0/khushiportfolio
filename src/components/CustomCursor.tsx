@@ -60,30 +60,30 @@ export default function CustomCursor() {
     <>
       <motion.div
         aria-hidden
-        className="pointer-events-none fixed z-[9999] hidden h-9 w-9 -ml-[18px] -mt-[18px] md:block"
+        className="pointer-events-none fixed z-[9999] hidden h-5 w-5 -ml-2.5 -mt-2.5 md:block"
         style={{ left: ringX, top: ringY }}
       >
         <motion.span
           animate={{
-            scale: hovering ? 1.7 : 1,
+            scale: hovering ? 1.45 : 1,
             opacity: visible ? 1 : 0,
           }}
           transition={{ type: "spring", stiffness: 280, damping: 22 }}
-          className="block h-full w-full rounded-full border-2 border-brand"
+          className="block h-full w-full rounded-full border border-brand"
         />
       </motion.div>
       <motion.div
         aria-hidden
-        className="pointer-events-none fixed z-[9999] hidden h-2 w-2 -ml-1 -mt-1 md:block"
+        className="pointer-events-none fixed z-[9999] hidden h-1.5 w-1.5 -ml-[3px] -mt-[3px] md:block"
         style={{ left: dotX, top: dotY }}
       >
         <motion.span
           animate={{
-            scale: hovering ? 0.35 : 1,
+            scale: hovering ? 0.4 : 1,
             opacity: visible ? 1 : 0,
           }}
           transition={{ type: "spring", stiffness: 350, damping: 22 }}
-          className="block h-full w-full rounded-full bg-brand shadow-[0_0_12px_var(--brand)]"
+          className="block h-full w-full rounded-full bg-brand shadow-[0_0_8px_var(--brand)]"
         />
       </motion.div>
     </>

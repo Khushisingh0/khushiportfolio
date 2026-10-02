@@ -2,6 +2,7 @@ import { Plus_Jakarta_Sans, Great_Vibes } from "next/font/google";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ThemeProvider>
           <CustomCursor />
           <Navbar />
+          <WhatsAppFloat />
           {children}
         </ThemeProvider>
       </body>
